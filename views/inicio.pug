@@ -1,0 +1,36 @@
+//- Agregar la cabecera del documento HTML
+extends ./layout/index
+
+block slider
+    .slider 
+        h1 Rio de Janeiro 
+        em aventura
+
+//- Agregar a la seccion del bloque definido
+block contenido
+    main.container.mt-5 
+        h2.text-center-mb-5 Sobre Nosotros
+        .row.mb-5 
+            .col-md-6
+                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, accusamus amet, natus nulla dolorum rem nobis vel consequatur velit iure alias tenetur placeat aliquid porro voluptatibus. Nostrum tempore reprehenderit perferendis voluptatem? Quaerat praesentium, sequi mollitia nisi earum dolores laudantium rem cum, sint, quis atque. Officiis blanditiis quis quaerat aut natus.
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, quaerat vitae! Dolore, ullam quia reiciendis nulla inventore omnis beatae sed quisquam ducimus reprehenderit facilis nam velit maiores accusamus dolorem earum in necessitatibus saepe nisi iusto fugiat assumenda alias! Explicabo veritatis rerum eum. Ipsa sunt dolorem sequi! Consequatur natus delectus excepturi? 
+            .col-md-6
+                img(src="/img/inicio_nosotros.jpg", alt="imagen nosotros", class="img-fluid")
+        
+        //- Mostrar los viajes
+        //- p= JSON.stringify(viajes)
+        include ./layout/bloque_viajes
+    
+    .descuento 
+        .container 
+            .row 
+                .col-md-6 
+                    .contenido 
+                        h3 5% de Descuento 
+                        p.titulo Viaja a Canada 
+                        p.fecha 20 de Marzo de 2022 - 28 de Marzo de 2022
+
+
+    .container 
+        h2.mt-5.text-center Testimoniales
+        include ./layout/bloque_testimoniales
